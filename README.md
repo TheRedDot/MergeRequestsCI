@@ -15,7 +15,7 @@ UI to see all GitLab merge requests of your team in one place.
 ### Clone the project
 
 ```shell
-$ git clone https://github.com/Hexanet/MergeRequestsCI.git
+$ git clone https://github.com/TheRedDot/MergeRequestsCI.git
 $ cd MergeRequestsCI
 ```
 
@@ -37,7 +37,7 @@ Then open `http://localhost:3000` in your browser.
 
 ## Credits
 
-Developed by [Hexanet](http://www.hexanet.fr/).
+Forked from [Hexanet/MonologExtraBundle](https://github.com/Hexanet/MonologExtraBundle).
 
 ### Inspiration
 
@@ -45,4 +45,4 @@ Thanks [M6Web](https://github.com/M6Web) ([Github Team Reviewer](https://github.
 
 ## License
 
-[MergeRequestsCI](https://github.com/Hexanet/MergeRequestsCI) is licensed under the [MIT license](LICENSE).
+[MergeRequestsCI](https://github.com/TheRedDot/MergeRequestsCI) is licensed under the [MIT license](LICENSE).
