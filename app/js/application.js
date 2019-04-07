@@ -18,6 +18,11 @@ angular.module('app', [require('angular-tooltips'), require('angular-route'), re
       controller: 'SettingsCtrl',
       controllerAs: 'vm'
     })
+    .when('/filtering', {
+      templateUrl: 'filtering.html',
+      controller: 'FilteringCtrl',
+      controllerAs: 'vm'
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -36,9 +41,11 @@ angular.module('app', [require('angular-tooltips'), require('angular-route'), re
 .service('gitLabManager', ['configManager', '$http', '$q', require('./services/gitlab_manager')])
 .service('favicoService', require('./services/favico'))
 .service('MergeRequestFetcher', ['gitLabManager', 'configManager', '$q', '$http', require('./services/merge_request_fetcher')])
+.service('ProjectsFetcher', ['configManager', '$http', require('./services/projects_fetcher')])
 
 .controller('DashboardCtrl', ['$interval', 'MergeRequestFetcher', 'configManager', 'favicoService', require('./controllers/dashboard')])
 .controller('SettingsCtrl', ['gitLabManager', 'configManager', '$location', 'MergeRequestFetcher', require('./controllers/settings')])
+.controller('FilteringCtrl', ['configManager', 'ProjectsFetcher', require('./controllers/filtering')])
 
 .run(['$rootScope', 'gitLabManager', '$location', function($rootScope, gitLabManager, $location) {
   $rootScope.titleAddon = '';

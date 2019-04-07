@@ -2,7 +2,12 @@ module.exports = function ($interval, MergeRequestFetcher, configManager, favico
   var vm = this;
   vm.refresh = function() {
     MergeRequestFetcher.getMergeRequests().then(function(mergeRequests) {
-      vm.mergeRequests = mergeRequests;
+      var blackListedProjectsIds = configManager.getBlackListedProjectsIds();
+
+      vm.mergeRequests = mergeRequests.filter(function (mergeRequest){
+        return blackListedProjectsIds.indexOf(mergeRequest.project_id) === -1;
+      });
+
       favicoService.badge(mergeRequests.length);
     });
   };

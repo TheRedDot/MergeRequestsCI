@@ -47,5 +47,13 @@ module.exports = function(localStorageService) {
     localStorageService.remove('url', 'private_token');
   }
 
+  configManager.getBlackListedProjectsIds = function() {
+    return localStorageService.get('black_listed_projects_ids') || [];
+  }
+
+  configManager.setBlackListedProjectsIds = function(blackListProjectsIds) {
+    localStorageService.set('black_listed_projects_ids', blackListProjectsIds);
+  }
+
   return configManager;
 };

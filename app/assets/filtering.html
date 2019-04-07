@@ -1,0 +1,25 @@
+<div class="columns">
+  <div class="row">
+    <h1 class="small-3 columns text-right">Filtering</h1>
+  </div>
+
+  <form novalidate>
+    <div class="row">
+      <div class="small-3 columns">
+        <label for="projects" class="text-right middle">Projects</label>
+      </div>
+      <div class="small-9 columns">
+        <div class="project" ng-repeat="project in vm.projects">
+          <p>{{project.name_with_namespace}}</p>
+          <button
+            type="button"
+            ng-click="vm.toggleBlackList(project)"
+            ng-class="{'disabled': project.black_listed}"
+          >
+            {{ project.black_listed ? 'Unblack list' : 'Black list'}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
