@@ -4,7 +4,7 @@ module.exports = function ($interval, MergeRequestFetcher, configManager, favico
     MergeRequestFetcher.getMergeRequests().then(function(mergeRequests) {
       var blackListedProjectsIds = configManager.getBlackListedProjectsIds();
 
-      vm.mergeRequests = mergeRequests.filter(function (mergeRequest){
+      vm.mergeRequests = mergeRequests.filter(function (mergeRequest) {
         return blackListedProjectsIds.indexOf(mergeRequest.project_id) === -1;
       });
 

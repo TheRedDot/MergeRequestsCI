@@ -21,11 +21,11 @@ module.exports = function (configManager, $http) {
     });
   };
 
-  function formatProjectList(projects){
+  function formatProjectList(projects) {
     var blackListedProjectsIds = configManager.getBlackListedProjectsIds();
 
-    return projects.map(function(project){
-      if(blackListedProjectsIds.indexOf(project.id) !== -1){
+    return projects.map(function(project) {
+      if (blackListedProjectsIds.indexOf(project.id) !== -1) {
         project.black_listed = true;
         return project;
       }
