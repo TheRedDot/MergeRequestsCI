@@ -37,7 +37,7 @@ Then open `http://localhost:3000` in your browser.
 
 ## Credits
 
-Forked from [Hexanet/MonologExtraBundle](https://github.com/Hexanet/MonologExtraBundle).
+Forked from [Hexanet/MergeRequestsCI](https://github.com/Hexanet/MergeRequestsCI).
 
 ### Inspiration
 
