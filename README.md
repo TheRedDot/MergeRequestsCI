@@ -1,6 +1,6 @@
 # MergeRequestsCI
 
-**❗ This package is abandoned and no longer actively maintained. We suggests using [gitlab-reviewer](https://github.com/TheGrowingPlant/gitlab-reviewer) instead.**
+**❗ This package is abandoned and no longer actively maintained. We suggest using [gitlab-reviewer](https://github.com/TheGrowingPlant/gitlab-reviewer) instead.**
 
 UI to see all GitLab merge requests of your team in one place.
 
